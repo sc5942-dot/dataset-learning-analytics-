@@ -15,6 +15,31 @@ This dataset's metadata is documented following the **Data Documentation Initiat
 
 ---
 
+## Sharing & Access Information
+
+* **Licenses/Restrictions:** This dataset is made available under the **MIT License**. You are free to share, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software/data, provided that the original copyright notice and permission notice are included in all copies.
+* **Links to Publications:** *N/A (No associated publication yet)*
+* **Links to Other Publicly Accessible Locations:** 
+  * GitHub Repository: `https://github.com/shihaocheng/ai-learning-analytics-python` *(Hypothetical)*
+  * Zenodo Repository: `https://doi.org/10.5281/zenodo.1234567` *(Hypothetical)*
+* **Links to Secondary Source Data:** Not applicable. All data points were directly generated and logged within the primary course environment.
+* ** Citation:** 
+  > Cheng, S. (2026). *The Impact of AI Tools on Students' Python Learning Performance* [Data set]. Zenodo. https://doi.org/10.5281/zenodo.1234567
+
+---
+
+## Methodological Information
+
+* **Description of Methods for Data Collection/Generation:** 
+  Data was collected during an introductory Python programming course at Columbia University. Learning analytics were captured through two primary automated pipelines:
+  1. **Course Platform Logs:** Recorded overall student activity, code submission frequency (`code_submissions`), assignment scores (`assignment_avg_score`), and final course grades (`average_python_grade`).
+  2. **AI Coding Assistant Plugins:** Logged interaction metadata from integrated AI assistants (e.g., ChatGPT, Gemini), recording the total count of prompts submitted (`ai_prompt_count`) and cumulative time active in AI-assisted coding sessions (`ai_assisted_hours`).
+* **Methods for Data Processing and Cleaning:** 
+  * **Anonymization:** Direct identifiers (e.g., student names, institutional IDs, email addresses) were stripped and replaced with anonymized IDs (`STU_01`, `STU_02`, etc.) to protect student privacy in accordance with IRB guidelines.
+  * **Missing Data & Outlier Handling:** Incomplete logs resulting from dropped enrollments were removed. Numeric variables were validated against standard logical ranges (e.g., scores clamped between $0.0$ and $100.0$).
+* **Instrument- or Software-Specific Information:** 
+  * Data logging and extraction were conducted using Python (v3.10+) and Pandas.
+  * Automated grading was executed via JupyterHub and nbgrader integration.
 ##  Data Dictionary
 
 The dataset is saved as a structured CSV file (`python_ai_learning_analytics.csv`). Below is the complete data dictionary defining each variable attribute:
